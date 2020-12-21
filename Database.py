@@ -1,0 +1,10 @@
+import pymysql
+conn = pymysql.connect(user="root",password="",host="localhost",database="python")
+#print(conn)
+cur = conn.cursor()
+# cur.execute("create table personal(full_name varchar(25),first_name varchar(20),last_name varchar(25),mobile varchar(10),email varchar(25))")
+# print(cur)
+# cur.execute('show tables')
+# print(cur.fetchall())
+cur.execute("insert into personal(full_name,first_name,last_name,mobile,email) values('lavakishor','lava','kishor','7799660751','lava@gmail.com')") 
+conn.commit()
